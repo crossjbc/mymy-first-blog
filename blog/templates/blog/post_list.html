@@ -1,4 +1,20 @@
-<header>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <header>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</header>
+
+{% for post in posts %}
+    <article>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+{% endfor %}<header>
     <h1><a href="/">Django Girls Blog</a></h1>
 </header>
 
@@ -9,3 +25,5 @@
         <p>{{ post.text|linebreaksbr }}</p>
     </article>
 {% endfor %}
+    </body>
+</html>
